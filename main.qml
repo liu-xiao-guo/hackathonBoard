@@ -244,7 +244,8 @@ Rectangle {
         anchors.top: qrcode.bottom
         anchors.left: qrcode.left
         anchors.topMargin: 10
-        text: "pad.ubuntu.com/Xi4U5YvCF0"
+        // text: "pad.ubuntu.com/Xi4U5YvCF0"
+        text: ""
         font.pointSize: 20
         font.bold: true
         color: "white"
@@ -305,7 +306,7 @@ Rectangle {
         height: 100
         font.pointSize: 30
         font.bold: true
-        text: "微博话题墙: \n#Ubuntu手机黑客松#"
+        text: "WiFi: P2_Guest/peoplesquared \n微博话题墙: #Ubuntu手机黑客松#"
         color: "white"
         MouseArea {
             anchors.fill: parent
@@ -319,8 +320,9 @@ Rectangle {
         anchors.topMargin: 20
         anchors.leftMargin: 70
         visible: countDown.visible
-        width: 120
-        height: 120
+        source: "wechat-qrcode.png"
+        width: 200
+        height: 220
         z: 2
     }
 
@@ -399,6 +401,6 @@ Rectangle {
         var qr = QR.qrcode(3, 'L')
         qr.addData('http://' + url.text);
         qr.make()
-        qrcode.source = qr.createImgTag();
+        // qrcode.source = qr.createImgTag();
     }
 }
